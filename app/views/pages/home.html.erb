@@ -1,0 +1,15 @@
+<% if signed_in? %>
+	<h1>Welcome back, <%= current_user.username %>!</h1>
+	
+	<p>Would you like to <%= link_to "write a review?", 'reviews/new' %> </p>
+		
+	</p>
+<% else %>
+<h1> Welcome! </h1> 
+	<p>
+		Yumlicious allows restaurant-enthusiasts from all over to share their experiences and thoughts on the restaurants they've been to. <br/>
+		Non-members may search the <%= link_to "site's database of restaurants", '/restaurants' %> and <%= link_to "browse reviews", '/reviews' %>. <br/>
+		Become a member to write reviews of your own and add restaurants that aren't currently listed on the site. <br/>
+		What are you waiting for? <%= link_to "Get started!", '/signup' %>
+	</p>
+<% end %>
